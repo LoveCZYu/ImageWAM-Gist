@@ -1,0 +1,187 @@
+defaults:
+  - interndata_a1_dirs
+  - _self_
+
+train:
+  _target_: imagewam.datasets.lerobot.robot_video_dataset.RobotVideoDataset
+  # Fill this with concrete LeRobot roots, e.g.
+  # /.../sim_updated/basic_tasks/franka/collect_the_shoes_language
+  # /.../sim_updated/pick_and_place_tasks/lift2/parallel_pick_and_place/basket_top
+  dataset_dirs: ${data.interndata_a1_dataset_dirs}
+  shape_meta:
+    images:
+      - key: cam_high
+        lerobot_key: observation.images.cam_high
+        raw_shape: [3, 480, 640]
+        shape: [3, 240, 320]
+      - key: cam_left
+        lerobot_key: observation.images.cam_left
+        raw_shape: [3, 480, 848]
+        shape: [3, 240, 320]
+      - key: cam_right
+        lerobot_key: observation.images.cam_right
+        raw_shape: [3, 480, 848]
+        shape: [3, 240, 320]
+    action:
+      - key: default
+        lerobot_key: action
+        raw_shape: 16
+        shape: 16
+    state:
+      - key: default
+        lerobot_key: observation.state
+        raw_shape: 16
+        shape: 16
+  num_frames: 33
+  global_sample_stride: 1
+  sample_index_stride: 1
+  action_video_freq_ratio: 4
+  video_size: [384, 320]
+  camera_key: null
+  val_set_proportion: 0.0
+  is_training_set: true
+  pretrained_norm_stats: ./dataset_meta/interndata_a1_ee_dataset_stats.json
+  lerobot_meta_cache: ./dataset_meta/interndata_a1_lerobot_meta.json
+  arrow_cache_dir: /dockerdata/hf_datasets_cache_interndata_a1
+  skip_padding_as_possible: false
+  concat_multi_camera: "robotwin"
+  robotwin_camera_layout: "legacy_384x320"
+  hetero_bridge:
+    enabled: true
+    canonical:
+      action_key: action
+      state_key: observation.state
+      image_keys:
+        cam_high: observation.images.cam_high
+        cam_left: observation.images.cam_left
+        cam_right: observation.images.cam_right
+    embodiments:
+      franka:
+        path_patterns: ["/franka/"]
+        images:
+          cam_high: images.rgb.head
+          cam_left: images.rgb.hand
+          cam_right: null
+        state:
+          left_pose: states.ee_to_robot_pose
+          left_gripper: states.gripper.position
+          right_pose: null
+          right_gripper: null
+        action:
+          left_pose: actions.ee_to_robot_pose
+          left_gripper: actions.gripper.position
+          right_pose: null
+          right_gripper: null
+      lift2:
+        path_patterns: ["/lift2/"]
+        images:
+          cam_high: images.rgb.head
+          cam_left: images.rgb.hand_left
+          cam_right: images.rgb.hand_right
+        state:
+          left_pose: states.left_ee_to_robot_pose
+          left_gripper: states.left_gripper.position
+          right_pose: states.right_ee_to_robot_pose
+          right_gripper: states.right_gripper.position
+        action:
+          left_pose: actions.left_ee_to_robot_pose
+          left_gripper: actions.left_gripper.position
+          right_pose: actions.right_ee_to_robot_pose
+          right_gripper: actions.right_gripper.position
+      split_aloha:
+        path_patterns: ["/split_aloha/"]
+        images:
+          cam_high: images.rgb.head
+          cam_left: images.rgb.hand_left
+          cam_right: images.rgb.hand_right
+        state:
+          left_pose: states.left_ee_to_robot_pose
+          left_gripper: states.left_gripper.position
+          right_pose: states.right_ee_to_robot_pose
+          right_gripper: states.right_gripper.position
+        action:
+          left_pose: actions.left_ee_to_robot_pose
+          left_gripper: actions.left_gripper.position
+          right_pose: actions.right_ee_to_robot_pose
+          right_gripper: actions.right_gripper.position
+      genie1:
+        path_patterns: ["/genie1/"]
+        images:
+          cam_high: images.rgb.head
+          cam_left: images.rgb.hand_left
+          cam_right: images.rgb.hand_right
+        state:
+          left_pose: states.left_ee_to_robot_pose
+          left_gripper: states.left_gripper.position
+          right_pose: states.right_ee_to_robot_pose
+          right_gripper: states.right_gripper.position
+        action:
+          left_pose: actions.left_ee_to_robot_pose
+          left_gripper: actions.left_gripper.position
+          right_pose: actions.right_ee_to_robot_pose
+          right_gripper: actions.right_gripper.position
+  processor:
+    _target_: imagewam.datasets.lerobot.processors.imagewam_processor.ImageWAMProcessor
+    shape_meta: ${data.train.shape_meta}
+    num_obs_steps: ${data.train.num_frames}
+    num_output_cameras: 3
+    action_output_dim: 16
+    proprio_output_dim: 16
+    action_state_transforms: null
+    use_stepwise_action_norm: false
+    norm_default_mode: q01/q99
+    norm_exception_mode: null
+    action_state_merger:
+      _target_: imagewam.datasets.lerobot.transforms.action_state_merger.ConcatLeftAlign
+    train_transforms:
+      - _target_: imagewam.datasets.lerobot.transforms.image.ToTensor
+      - _target_: torchvision.transforms.Resize
+        size: [240, 320]
+    val_transforms:
+      - _target_: imagewam.datasets.lerobot.transforms.image.ToTensor
+      - _target_: torchvision.transforms.Resize
+        size: [240, 320]
+  require_text_cache: false
+  text_embedding_cache_dir: null
+  qwen_text_cache_dir: ???
+  qwen_context_len: 128
+  context_len: 128
+
+val:
+  _target_: imagewam.datasets.lerobot.robot_video_dataset.RobotVideoDataset
+  dataset_dirs: ${data.interndata_a1_dataset_dirs}
+  shape_meta: ${data.train.shape_meta}
+  num_frames: ${data.train.num_frames}
+  global_sample_stride: ${data.train.global_sample_stride}
+  sample_index_stride: ${data.train.sample_index_stride}
+  action_video_freq_ratio: ${data.train.action_video_freq_ratio}
+  video_size: ${data.train.video_size}
+  camera_key: null
+  val_set_proportion: 0.01
+  is_training_set: false
+  pretrained_norm_stats: ${data.train.pretrained_norm_stats}
+  lerobot_meta_cache: ${data.train.lerobot_meta_cache}
+  arrow_cache_dir: ${data.train.arrow_cache_dir}
+  skip_padding_as_possible: false
+  concat_multi_camera: ${data.train.concat_multi_camera}
+  robotwin_camera_layout: ${data.train.robotwin_camera_layout}
+  hetero_bridge: ${data.train.hetero_bridge}
+  processor:
+    _target_: imagewam.datasets.lerobot.processors.imagewam_processor.ImageWAMProcessor
+    shape_meta: ${data.train.shape_meta}
+    num_obs_steps: ${data.train.num_frames}
+    num_output_cameras: ${data.train.processor.num_output_cameras}
+    action_output_dim: ${data.train.processor.action_output_dim}
+    proprio_output_dim: ${data.train.processor.proprio_output_dim}
+    action_state_transforms: ${data.train.processor.action_state_transforms}
+    use_stepwise_action_norm: ${data.train.processor.use_stepwise_action_norm}
+    norm_default_mode: ${data.train.processor.norm_default_mode}
+    norm_exception_mode: ${data.train.processor.norm_exception_mode}
+    action_state_merger: ${data.train.processor.action_state_merger}
+    train_transforms: ${data.train.processor.train_transforms}
+    val_transforms: ${data.train.processor.val_transforms}
+  require_text_cache: ${data.train.require_text_cache}
+  text_embedding_cache_dir: ${data.train.text_embedding_cache_dir}
+  qwen_text_cache_dir: ${data.train.qwen_text_cache_dir}
+  qwen_context_len: ${data.train.qwen_context_len}
+  context_len: ${data.train.context_len}

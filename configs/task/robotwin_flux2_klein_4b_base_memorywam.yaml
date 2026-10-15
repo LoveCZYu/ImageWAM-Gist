@@ -1,0 +1,73 @@
+# @package _global_
+
+defaults:
+  - /memory: fixed
+  - override /data: robotwin_omnigen2
+  - override /model: imagewam_flux2_klein_4b_base_edit_memory
+  - _self_
+
+data:
+  train:
+    require_text_cache: false
+    qwen_text_cache_dir: ${oc.env:IMAGEWAM_QWEN_CACHE,???}
+    qwen_context_len: 128
+    qwen_text_cache_format: qwen3_flux2
+    endpoint_frames_only: true
+    edit_memory_history_mode: episode
+    edit_memory_history_stride: ${oc.env:IMAGEWAM_REPLAN_STEPS,16}
+    edit_memory_history_max_steps: 0
+    edit_memory_history_anchor_frames: 2
+    edit_memory_history_use_aug: false
+    edit_memory_replan_aligned_samples: true
+  val:
+    require_text_cache: false
+    qwen_text_cache_dir: ${data.train.qwen_text_cache_dir}
+    qwen_context_len: ${data.train.qwen_context_len}
+    qwen_text_cache_format: ${data.train.qwen_text_cache_format}
+    endpoint_frames_only: true
+    edit_memory_history_mode: episode
+    edit_memory_history_stride: ${data.train.edit_memory_history_stride}
+    edit_memory_history_max_steps: 0
+    edit_memory_history_anchor_frames: 2
+    edit_memory_history_use_aug: false
+    edit_memory_replan_aligned_samples: true
+
+# Full episode histories have variable length, so exact mode uses one sample per rank.
+batch_size: 1
+gradient_accumulation_steps: 32
+num_workers: 8
+prefetch_factor: 2
+persistent_workers: true
+learning_rate: 1e-4
+num_epochs: 5
+log_every: 10
+save_every: 2000
+eval_every: 0
+mixed_precision: bf16
+
+model:
+  proprio_dim: ${data.train.processor.proprio_output_dim}
+  qwen_context_len: ${data.train.qwen_context_len}
+  flux2_lora_config:
+    enabled: true
+    rank: 16
+    alpha: 16.0
+    dropout: 0.0
+    save_lora_merged: false
+    save_trainable_only: true
+  edit_memory_config:
+    enabled: true
+    bank:
+      anchor_frames: 2
+      recent_frames: 4
+      gist_tokens_per_frame: 8
+      max_entries: 0
+      detach_on_write: auto
+    training:
+      memory_source: episode_window
+      history_required: true
+      history_teacher_no_grad: true
+      history_steps_per_update: 4
+
+wandb:
+  name: robotwin_flux2_klein_4b_base_memorywam

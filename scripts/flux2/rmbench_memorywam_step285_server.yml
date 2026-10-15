@@ -1,0 +1,30 @@
+policy_name: imagewam_policy
+sim_cfg_path: /data41/xucx2606/memoryWAM_softk/configs/sim_robotwin.yaml
+sim_task: rmbench_flux2_klein_4b_base_memorywam_from_flux2
+sim_memory: adaptive_gist_vlm_infer
+checkpoint_path: null
+ckpt_setting: /data41/xucx2606/memoryWAM_softk/runs/rmbench_flux2_klein_4b_base_memorywam_from_flux2/memorywam_kv8_episode_tbptt4_fullflux_8gpu_zero2_bs1_ep5_20260725_175203/checkpoints/weights/step_000285.pt
+dataset_stats_path: /home/xucx2606/ImageWAM/runs/rmbench_flux2_klein_4b_base_imagewam/2026-06-26_19-31-23/dataset_stats.json
+device: cuda
+mixed_precision: bf16
+action_horizon: 16
+replan_steps: 16
+num_inference_steps: 10
+sigma_shift: null
+seed: 42
+text_cfg_scale: 1.0
+negative_prompt: ""
+rand_device: cpu
+tiled: false
+timing_enabled: true
+robotwin_camera_layout: compact_288x256
+model_overrides:
+  flux2_src_path: /home/xucx2606/ImageWAM/third_party/flux2
+  flux2_model_path: /home/xucx2606/ImageWAM/checkpoints/flux2/FLUX.2-klein-base-4B/flux-2-klein-base-4b.safetensors
+  ae_model_path: /home/xucx2606/ImageWAM/checkpoints/flux2/FLUX.2-dev/ae.safetensors
+  variant: klein-base-4b
+  qwen3_model_spec: /home/xucx2606/models/Qwen3-4B-Instruct-2507
+  qwen_context_len: 512
+  load_text_encoder: false
+  pack_proprio_after_text: true
+  proprio_dim: 14

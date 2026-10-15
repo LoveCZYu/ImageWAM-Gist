@@ -1,0 +1,69 @@
+defaults:
+  - interndata_a1_ee
+  - interndata_a1_v3_dirs
+  - _self_
+
+train:
+  lerobot_backend: v3
+  lerobot_v3_init_num_workers: 16
+  lerobot_tolerance_s: 0.04
+  lerobot_v3_index_cache: ./dataset_meta/interndata_a1_ee_v3_train_lerobot_v3_index.json
+  lerobot_v3_video_backend: torchcodec
+  slow_getitem_log_sec: 0.0
+  lerobot_meta_cache: null
+  arrow_cache_dir: null
+  pretrained_norm_stats: ./dataset_meta/interndata_a1_ee_v3_dataset_stats.json
+  val_set_proportion: 0.01
+  val_split_level: root
+  global_sample_stride: 4
+  sample_index_stride: 8
+  processor:
+    norm_default_mode: z-score
+    train_transforms_by_key:
+      cam_high:
+        - _target_: imagewam.datasets.lerobot.transforms.image.ToTensor
+        - _target_: imagewam.datasets.lerobot.transforms.image.LetterboxResize
+          size: [240, 320]
+          fill: 0.0
+      cam_left:
+        - _target_: imagewam.datasets.lerobot.transforms.image.ToTensor
+        - _target_: torchvision.transforms.Resize
+          size: [240, 320]
+      cam_right:
+        - _target_: imagewam.datasets.lerobot.transforms.image.ToTensor
+        - _target_: torchvision.transforms.Resize
+          size: [240, 320]
+    val_transforms_by_key:
+      cam_high:
+        - _target_: imagewam.datasets.lerobot.transforms.image.ToTensor
+        - _target_: imagewam.datasets.lerobot.transforms.image.LetterboxResize
+          size: [240, 320]
+          fill: 0.0
+      cam_left:
+        - _target_: imagewam.datasets.lerobot.transforms.image.ToTensor
+        - _target_: torchvision.transforms.Resize
+          size: [240, 320]
+      cam_right:
+        - _target_: imagewam.datasets.lerobot.transforms.image.ToTensor
+        - _target_: torchvision.transforms.Resize
+          size: [240, 320]
+
+val:
+  dataset_dirs: ${data.interndata_a1_dataset_dirs}
+  lerobot_backend: ${data.train.lerobot_backend}
+  lerobot_v3_init_num_workers: ${data.train.lerobot_v3_init_num_workers}
+  lerobot_tolerance_s: ${data.train.lerobot_tolerance_s}
+  lerobot_v3_index_cache: ./dataset_meta/interndata_a1_ee_v3_val_lerobot_v3_index.json
+  lerobot_v3_video_backend: ${data.train.lerobot_v3_video_backend}
+  slow_getitem_log_sec: ${data.train.slow_getitem_log_sec}
+  lerobot_meta_cache: ${data.train.lerobot_meta_cache}
+  arrow_cache_dir: ${data.train.arrow_cache_dir}
+  pretrained_norm_stats: ${data.train.pretrained_norm_stats}
+  val_set_proportion: ${data.train.val_set_proportion}
+  val_split_level: ${data.train.val_split_level}
+  global_sample_stride: ${data.train.global_sample_stride}
+  sample_index_stride: ${data.train.sample_index_stride}
+  processor:
+    norm_default_mode: ${data.train.processor.norm_default_mode}
+    train_transforms_by_key: ${data.train.processor.train_transforms_by_key}
+    val_transforms_by_key: ${data.train.processor.val_transforms_by_key}

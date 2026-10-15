@@ -1,0 +1,13 @@
+# @package _global_
+
+model:
+  edit_memory_config:
+    adaptive_span:
+      enabled: true
+      min_frames: 1
+      max_frames: 64
+      hidden_dim: 256
+      gate_temperature: 1.0
+      span_cost: 0.0001
+    adaptive_gist:
+      enabled: false

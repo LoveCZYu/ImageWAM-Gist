@@ -1,0 +1,35 @@
+# @package _global_
+
+defaults:
+  - override /data: interndata_a1_ee_omnigen2
+  - override /model: imagewam_omnigen2
+  - _self_
+
+batch_size: 12
+gradient_accumulation_steps: 8
+num_workers: 24
+prefetch_factor: 2
+persistent_workers: true
+
+learning_rate: 5e-5
+lr_scheduler_type: constant
+warmup_steps: 100
+num_epochs: 1
+max_steps: null
+log_every: 10
+save_every: 1000
+keep_latest_state_only: true
+eval_every: 100
+
+
+weight_decay: 1.0e-2
+mixed_precision: "bf16"
+resume: null
+
+model:
+  proprio_dim: ${data.train.processor.proprio_output_dim}
+
+wandb:
+  enabled: true
+  project: imagewam
+  name: interndata_a1_ee_omnigen2_imagewam

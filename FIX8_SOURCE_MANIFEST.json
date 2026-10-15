@@ -1,0 +1,1236 @@
+{
+  "schema": "imagewam_fix8_selected_backup_v1",
+  "input_backup": "C:/Users/ondec/Documents/A800/H800_xcx/source/memoryWAM_softk",
+  "archive_sha256": "610faea143a52e7282eee56497ef3c74ac5830cc60f7c7d00c3fb193a32799d1",
+  "original_files_count": 245,
+  "original_files_bytes": 3048030,
+  "python_syntax_checked": 110,
+  "step5920_exact_source_identity_verified": false,
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 5011,
+      "sha256": "7315c6fb613b9516cb9c0b77a0dcf25c7738cd34662af8d8fd4fcbee93fb0e11"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1207,
+      "sha256": "de463dbda031f5b7891e7d767b649306cd6b3f77711610bcbaf324ec445bca4f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 13574,
+      "sha256": "7e63ad3b0bd9a7036d942e663dfcf6c773c48544d5db7cd0d0abf6950d7522ef"
+    },
+    {
+      "path": "README_zh.md",
+      "bytes": 12727,
+      "sha256": "f9d884e1c1434cb0947104f6971003b67027b0e9ea41f2e4ca5e4475aa99a5c1"
+    },
+    {
+      "path": "configs/data/interndata_a1_dirs.yaml",
+      "bytes": 219008,
+      "sha256": "2666407581958d731a139a42eac919bfb3a0bd6937ac9548bb0e056e222eccd9"
+    },
+    {
+      "path": "configs/data/interndata_a1_ee.yaml",
+      "bytes": 7398,
+      "sha256": "becb7bfe3a26d7f829969b344d71f01b0ee9419e8d2bea4bdbf4593b50d20d86"
+    },
+    {
+      "path": "configs/data/interndata_a1_ee_omnigen2.yaml",
+      "bytes": 1703,
+      "sha256": "92134d6ef3e1d9293cfc1f76648f460b4a2cda556feceeff9c20f9fdf0683cee"
+    },
+    {
+      "path": "configs/data/interndata_a1_ee_v3.yaml",
+      "bytes": 2869,
+      "sha256": "fb1566f1b93deeec4041fa13f3855d49ad82a5e37fd5fb035550881e365221a5"
+    },
+    {
+      "path": "configs/data/interndata_a1_ee_v3_omnigen2.yaml",
+      "bytes": 1706,
+      "sha256": "bc0149e9ef4f1a9cad19378a62efa14de0022fe483c1e5ffaca0c25e1bb43f89"
+    },
+    {
+      "path": "configs/data/interndata_a1_ee_v3_sample.yaml",
+      "bytes": 2235,
+      "sha256": "b87f42a18a960fb09cc276794149bc9044737dada6fea1b8623793dea5ac9c1f"
+    },
+    {
+      "path": "configs/data/interndata_a1_v3_dirs.yaml",
+      "bytes": 240109,
+      "sha256": "a37578ddb28db5f8cf014ab2cec09a98e1fbaa0084082f7d401cd14b55af2105"
+    },
+    {
+      "path": "configs/data/libero_2cam.yaml",
+      "bytes": 2710,
+      "sha256": "d782a01621887215682de531ba24fc70d72e31eaa3d6cc6e15c07c62ae3876e8"
+    },
+    {
+      "path": "configs/data/libero_dim_pair.yaml",
+      "bytes": 117,
+      "sha256": "4491178e54718eabc6be6cd7e1c431a6dd8f737c3d3688ed83980cf5960210fc"
+    },
+    {
+      "path": "configs/data/libero_omnigen2_pair.yaml",
+      "bytes": 2392,
+      "sha256": "a2da72a6fcc811d9aaa16f1eaf4c534fdbcabc4bcee40e7d3919e2d51ee270e0"
+    },
+    {
+      "path": "configs/data/rmbench_omnigen2.yaml",
+      "bytes": 4591,
+      "sha256": "c9154fdb6ab27fd54e64f433aa0a08040fed50d0cc9b270704a5499e0739fb67"
+    },
+    {
+      "path": "configs/data/robotwin.yaml",
+      "bytes": 4338,
+      "sha256": "3ac70063f0297c9929d9f6f286ee997a96f8f9acb6f032184b695aee74abc749"
+    },
+    {
+      "path": "configs/data/robotwin_clean.yaml",
+      "bytes": 204,
+      "sha256": "9613a0c8d5d34386cc05e03545370ed04ce304bd4de30ba90b1994768244a669"
+    },
+    {
+      "path": "configs/data/robotwin_omnigen2.yaml",
+      "bytes": 5008,
+      "sha256": "7727cf8fe1ccb0380da48f351e2fb11e93b29997157c2335a9d645d08976bcd3"
+    },
+    {
+      "path": "configs/data/robotwin_omnigen2_clean.yaml",
+      "bytes": 213,
+      "sha256": "4b4f83a86bad17fd47e6fdcad6f84bca6fc232867e74b54c092d9d4b8401ff29"
+    },
+    {
+      "path": "configs/memory/adaptive_both.yaml",
+      "bytes": 424,
+      "sha256": "f13547202ef8128b6c9a00b5e9e5c1fc98e2e40c45796ce616d5da899f01fb0d"
+    },
+    {
+      "path": "configs/memory/adaptive_gist.yaml",
+      "bytes": 305,
+      "sha256": "9074506edc7daa5f119107a7a49e8246fe2e17e6308f8727ecb5f39300e22756"
+    },
+    {
+      "path": "configs/memory/adaptive_gist_vlm.yaml",
+      "bytes": 696,
+      "sha256": "00f72808e1ab20aec2ac3845008ea93efd374f587d116cb59292a074ff28e174"
+    },
+    {
+      "path": "configs/memory/adaptive_gist_vlm_infer.yaml",
+      "bytes": 336,
+      "sha256": "202bcaceafa88540488838d7b48a29de113d2c12e50955da984ed55789417f2f"
+    },
+    {
+      "path": "configs/memory/adaptive_span.yaml",
+      "bytes": 257,
+      "sha256": "abcd6c95210e88dfe2860117613a575afd21a8fa9ad3b644d1e54c1c76b59fff"
+    },
+    {
+      "path": "configs/memory/fixed.yaml",
+      "bytes": 138,
+      "sha256": "5b491b767c9bb3e597119e2163e90e250a2d8fbbb3cb56c8441bad19960d7a8a"
+    },
+    {
+      "path": "configs/model/imagewam.yaml",
+      "bytes": 1563,
+      "sha256": "fa2ad8b6f8811654313b3e2085b54d5d6148aee78f64fb680d2acf29a28f3c92"
+    },
+    {
+      "path": "configs/model/imagewam_cache_idm_omnigen2.yaml",
+      "bytes": 1357,
+      "sha256": "5d32c0657f0893395d22dcbd5bbfef02330697a79e0d36dd77374f1f5370a70a"
+    },
+    {
+      "path": "configs/model/imagewam_dim.yaml",
+      "bytes": 1282,
+      "sha256": "4f8f0cf39dccd99ff8de7000838229fb4ecc1b49e0dea0da6078fb244b2e41f2"
+    },
+    {
+      "path": "configs/model/imagewam_flux2_klein_4b_base.yaml",
+      "bytes": 1263,
+      "sha256": "e85203505b931723c41b3233c612e6fd9cee746abab68447194f26981ee20b9a"
+    },
+    {
+      "path": "configs/model/imagewam_flux2_klein_4b_base_edit_memory.yaml",
+      "bytes": 1498,
+      "sha256": "903592892a2f2e77d90d9e3183f46f6d3a2bbab7e12c8d5cfd71ae9dd11ea4d1"
+    },
+    {
+      "path": "configs/model/imagewam_flux2_klein_9b_base.yaml",
+      "bytes": 1262,
+      "sha256": "a487644898d7c2901fb8f1257d5b44e9c0411f6d579b97cb1d95a2388af0f6cb"
+    },
+    {
+      "path": "configs/model/imagewam_idm.yaml",
+      "bytes": 1567,
+      "sha256": "8cff70b6ebc605a0173200730af04d9f3eb88e2737bdf12a9e4cb589388b2480"
+    },
+    {
+      "path": "configs/model/imagewam_joint.yaml",
+      "bytes": 1569,
+      "sha256": "4959c8aa17186a93f7321f39665550b86171aaf4095e8a1bb4989e0a9badf7b8"
+    },
+    {
+      "path": "configs/model/imagewam_noise_idm.yaml",
+      "bytes": 1563,
+      "sha256": "417ca0c1bb69874707140a90437a95e1781dd815054085953539f2fba55f7582"
+    },
+    {
+      "path": "configs/model/imagewam_noise_idm_omnigen2.yaml",
+      "bytes": 1356,
+      "sha256": "94e294ce44e0403459a09df0694a23bef9ffd8ff583b6448e8b60e305de1bd89"
+    },
+    {
+      "path": "configs/model/imagewam_omnigen2.yaml",
+      "bytes": 2495,
+      "sha256": "20aa4e47ac501f0b94e94d143ca1cb1f11aa65c4832fec9e03cde6d36a57e96f"
+    },
+    {
+      "path": "configs/model/imagewam_ovis_u1.yaml",
+      "bytes": 787,
+      "sha256": "739886b28f9fc4341a17abc1de14cfac4ca10be2d4d5e4004561eca32393adb0"
+    },
+    {
+      "path": "configs/sim_libero.yaml",
+      "bytes": 1296,
+      "sha256": "f9454e343436c9e5739b873cdec6907a0b3aac3584587f4445422f3c69ee8e47"
+    },
+    {
+      "path": "configs/sim_libero_omnigen2.yaml",
+      "bytes": 1192,
+      "sha256": "b49b6a368f3f3d542976dabfc6f9c8a708f77f69b856f47133763a22f2ea9e9e"
+    },
+    {
+      "path": "configs/sim_robotwin.yaml",
+      "bytes": 1184,
+      "sha256": "98b071575d433ac74ed589ce8e3096d1a7d3f0488e5742c9eeb414e6dd3b8c5c"
+    },
+    {
+      "path": "configs/task/interndata_a1_ee_omnigen2_imagewam.yaml",
+      "bytes": 655,
+      "sha256": "42baa7a5cecbf9970a43e8ca256cdbaa20246b9a28f9cfb5b0ba2e77980b39c9"
+    },
+    {
+      "path": "configs/task/interndata_a1_ee_v3_flux2_klein_4b_base_imagewam.yaml",
+      "bytes": 969,
+      "sha256": "f8004c2568d2cebb108b87b061223280b1e40aa5a43f1e32bcbd559825ee1354"
+    },
+    {
+      "path": "configs/task/interndata_a1_ee_v3_omnigen2_imagewam.yaml",
+      "bytes": 659,
+      "sha256": "422fb6a17d601318366ee25142bd8b32fc0cb951550187b169d9ab423746ba02"
+    },
+    {
+      "path": "configs/task/libero_dim_imagewam.yaml",
+      "bytes": 567,
+      "sha256": "5d97b0a289c3b5fe9a884427b52afab90131c9fecf97c7e4a08b642aa72a6476"
+    },
+    {
+      "path": "configs/task/libero_flux2_klein_4b_base_imagewam.yaml",
+      "bytes": 780,
+      "sha256": "faf10a613599893e47dae0ddaaea96a6152d05ecb360ba4059acee907321d505"
+    },
+    {
+      "path": "configs/task/libero_flux2_klein_9b_base_imagewam.yaml",
+      "bytes": 781,
+      "sha256": "42677cdadeb76f6f62e36385152dbfa49090e9d39269cc5cceb2bdff5dbd7ffd"
+    },
+    {
+      "path": "configs/task/libero_idm_2cam224_1e-4.yaml",
+      "bytes": 437,
+      "sha256": "21ec1f3560c0d565224c4e47b7479e7565d453c860213e36fb411b180e4c058d"
+    },
+    {
+      "path": "configs/task/libero_joint_2cam224_1e-4.yaml",
+      "bytes": 439,
+      "sha256": "c025d374587899c24cf3cb3e17422f7af310da6253cdae32916840b1e8200307"
+    },
+    {
+      "path": "configs/task/libero_noise_idm_2cam224_1e-4.yaml",
+      "bytes": 444,
+      "sha256": "709ffdf063829269327704af2edebdf7eb0a5cf5af54bd317255433d026ac41c"
+    },
+    {
+      "path": "configs/task/libero_omnigen2_imagewam.yaml",
+      "bytes": 584,
+      "sha256": "2e97cd2bbe51c43befcf881f3f381ed1577d667d68800dde55467829d6287bb4"
+    },
+    {
+      "path": "configs/task/libero_ovis_u1_imagewam.yaml",
+      "bytes": 691,
+      "sha256": "1203dbe0ded510297f7365a9b1d61770191a1c620ce1ac14a83f7872d532cf31"
+    },
+    {
+      "path": "configs/task/libero_uncond_2cam224_1e-4.yaml",
+      "bytes": 434,
+      "sha256": "534107c69326e676beddf7e1db4f55dcabfb2a2dec1ceaf2f92daa7f4ce015c9"
+    },
+    {
+      "path": "configs/task/rmbench_flux2_klein_4b_base_memorywam_from_flux2.yaml",
+      "bytes": 3673,
+      "sha256": "009b57cd893111b8474c189bef0ebf7249b5b500a8bbf0259eff1b0bf2b1fc1a"
+    },
+    {
+      "path": "configs/task/robotwin_flux2_klein_4b_base_clean_imagewam.yaml",
+      "bytes": 936,
+      "sha256": "eeeddecd204fb1958b90ef6163ec2efa17dee476a9b1e7d1f761e308abe3e708"
+    },
+    {
+      "path": "configs/task/robotwin_flux2_klein_4b_base_imagewam.yaml",
+      "bytes": 923,
+      "sha256": "35dee4eaab35c892c9e06b5e58c23d85f7f16e27f1e23f6185f5e2525b57118e"
+    },
+    {
+      "path": "configs/task/robotwin_flux2_klein_4b_base_memorywam.yaml",
+      "bytes": 2155,
+      "sha256": "d3dc894bd6436484cec95747b398d03e96c952039461fff4b359c03f13f784fb"
+    },
+    {
+      "path": "configs/task/robotwin_flux2_klein_9b_base_clean_imagewam.yaml",
+      "bytes": 934,
+      "sha256": "f153f57a3c335a28919275a7d01a9600746bdd7bd4433949a93b8ba2c39e783e"
+    },
+    {
+      "path": "configs/task/robotwin_flux2_klein_9b_base_imagewam.yaml",
+      "bytes": 922,
+      "sha256": "f87f7ee906a898d4ccd74f0146aa99b60e20dd7e2488b3877095b595f25bedca"
+    },
+    {
+      "path": "configs/task/robotwin_idm_3cam_384_1e-4.yaml",
+      "bytes": 433,
+      "sha256": "65cf6201e5ee15ef9fd6ad54da21e2879bd909c1e7d5894dd4c17cb6c608041e"
+    },
+    {
+      "path": "configs/task/robotwin_joint_3cam_384_1e-4.yaml",
+      "bytes": 435,
+      "sha256": "6b0a7e8074bac07d0b41ac1e0e1e09b19c7e6c24e9eec18e835f10ad7128980a"
+    },
+    {
+      "path": "configs/task/robotwin_noise_idm_3cam_384_1e-4.yaml",
+      "bytes": 439,
+      "sha256": "eaaac9abcc559f2c14ea92335650c28e667ca4a09bdc16a5003b296521c7e81c"
+    },
+    {
+      "path": "configs/task/robotwin_omnigen2_cache_idm.yaml",
+      "bytes": 544,
+      "sha256": "baf546840006d057d99ca2461d4b57665e77997feb09b6784a25a7d7f9a08a00"
+    },
+    {
+      "path": "configs/task/robotwin_omnigen2_clean_imagewam.yaml",
+      "bytes": 544,
+      "sha256": "4d886940df2a97ecdf5102f949ade3bebc9eb327d83807e3fddde7c2e13d8790"
+    },
+    {
+      "path": "configs/task/robotwin_omnigen2_imagewam.yaml",
+      "bytes": 534,
+      "sha256": "69cc89dd564d79dd08994bc40e81f99b8454ef81bbffcac24148b83b29d0fb6b"
+    },
+    {
+      "path": "configs/task/robotwin_omnigen2_noise_idm.yaml",
+      "bytes": 545,
+      "sha256": "60aa9babd88e45dc944bd2c456a5783e96f8c74e3ef3f28efcaa4cefaf950021"
+    },
+    {
+      "path": "configs/task/robotwin_ovis_u1_imagewam.yaml",
+      "bytes": 639,
+      "sha256": "e01cfd78ebebeff3c9d63452b50c328de7eab4244c14383dae46a12e3f4daa18"
+    },
+    {
+      "path": "configs/task/robotwin_uncond_3cam_384_1e-4.yaml",
+      "bytes": 429,
+      "sha256": "5a36450328336aeee293a5612d139c0459d464a002c881743d47a082a8b89f79"
+    },
+    {
+      "path": "configs/train.yaml",
+      "bytes": 1751,
+      "sha256": "2245b55d2cf1330e7948e9cad712242abe9211673c58073ec408e56552fdc9d7"
+    },
+    {
+      "path": "docs/MEMORYWAM_BASELINE.md",
+      "bytes": 640,
+      "sha256": "c6d4454040e94acb79a7a3d34d6cd72d37ca4f7155ddff1b33997cbf50767400"
+    },
+    {
+      "path": "docs/MEMORYWAM_DESIGN.md",
+      "bytes": 5303,
+      "sha256": "6d7c6d965942e9a3897f9ed5cc0ef1fc7df4fa5f1750f3af81ad292d6aed75e0"
+    },
+    {
+      "path": "docs/TRAIN_INFER_PARITY.md",
+      "bytes": 3526,
+      "sha256": "38afae48efa27481f6be1a5d0f669766dac1f1a4d8e6d5d4163d741c5ab38eb9"
+    },
+    {
+      "path": "docs/dependencies.md",
+      "bytes": 5332,
+      "sha256": "531014a2763f42611cd8605dfbfc37f313c3a535950daccba55820d6cf5f8a08"
+    },
+    {
+      "path": "experiments/libero/action_ensembler.py",
+      "bytes": 1148,
+      "sha256": "13490f701ea9be8d618e199189648c5c3184b5d6a41b32665565e093c0209534"
+    },
+    {
+      "path": "experiments/libero/eval_libero_omnigen2.sh",
+      "bytes": 407,
+      "sha256": "9686ab5a2c8c48d8494cfe05fb1f7d34198521a48ae730eff9318e3018546c37"
+    },
+    {
+      "path": "experiments/libero/eval_libero_single.py",
+      "bytes": 38564,
+      "sha256": "c168e895158ca4cd9c47869a81ac598e0adf9da483982f90c9271269a20f3a49"
+    },
+    {
+      "path": "experiments/libero/libero_utils.py",
+      "bytes": 7117,
+      "sha256": "05db3aa21e8232093c4643ddfc6ddcf75861064a23802d8add263c2deb0942d1"
+    },
+    {
+      "path": "experiments/libero/run_libero_manager.py",
+      "bytes": 10669,
+      "sha256": "fbb2af4fadf6b522fef273a95e738f2ee55bc53355791df97bb586fa37441c1b"
+    },
+    {
+      "path": "experiments/libero/run_libero_parallel_test.sh",
+      "bytes": 27614,
+      "sha256": "5539d218bb7c66ba3a32f5df56dacf638807c2c3ff2061e11f54108cd93cf2ee"
+    },
+    {
+      "path": "experiments/libero/summarize_results.py",
+      "bytes": 12035,
+      "sha256": "2538cd98be6718dbdd92e47cacdd5e5a55c65efcba6c431eb2f6ea8767e6e15f"
+    },
+    {
+      "path": "experiments/rmbench/imagewam_remote_client/__init__.py",
+      "bytes": 104,
+      "sha256": "ac90908f012d98fc3fcaf1c46c56eac82a30662466117e1f0c3c63f311a623e3"
+    },
+    {
+      "path": "experiments/rmbench/imagewam_remote_client/deploy_policy.py",
+      "bytes": 3790,
+      "sha256": "d1fe568cff0f73fbc43909ddc51cf7bb79c07f9cf666d62cb3e9ff05e3ac56f0"
+    },
+    {
+      "path": "experiments/rmbench/imagewam_remote_client/deploy_policy.yml",
+      "bytes": 237,
+      "sha256": "71905f305ddf15499b4d5c9c8622e63ddfd2b7ab36f1cded1e187846fdc69c2a"
+    },
+    {
+      "path": "experiments/robotwin/eval_robotwin_single.py",
+      "bytes": 10073,
+      "sha256": "4c0eef6e14c033362d819238dbe7dd4d48d73778e3eb582cc5a9098e2df45f59"
+    },
+    {
+      "path": "experiments/robotwin/imagewam_policy/__init__.py",
+      "bytes": 30,
+      "sha256": "f95d847740d78e88e41b5387dc5c6a9b858548a8898b2cd1f0bf00a78737e3eb"
+    },
+    {
+      "path": "experiments/robotwin/imagewam_policy/deploy_policy.py",
+      "bytes": 25002,
+      "sha256": "d4ff2889aef2fdaf3d275c6fb08f62c2a857b086093daf1f890082fd2ece94f5"
+    },
+    {
+      "path": "experiments/robotwin/imagewam_policy/deploy_policy.yml",
+      "bytes": 566,
+      "sha256": "855fb6ef3d604243cea2846f2eb2b80d802d030f70a23de070d7d9b200bfa1d9"
+    },
+    {
+      "path": "experiments/robotwin/run_robotwin_manager.py",
+      "bytes": 16431,
+      "sha256": "484de85a53378ed14991ea618283ce4f2483955793a4ee2a521eb5d600b18408"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 2120,
+      "sha256": "caded10e8c55870e1f91e08108246b4bf315126b3fbcd9500aa585a91d723e0b"
+    },
+    {
+      "path": "scripts/__init__.py",
+      "bytes": 39,
+      "sha256": "fa0a5ac96189f01acca5c696150d9073b552ef5e899ae37ef77ddc2d1ebfabb4"
+    },
+    {
+      "path": "scripts/accelerate_configs/accelerate_zero0.yaml",
+      "bytes": 511,
+      "sha256": "b23ae03f239f0b2f0eca4cbfc0884f31061664e3ef4c06203a8496b77f7189ed"
+    },
+    {
+      "path": "scripts/accelerate_configs/accelerate_zero1_ds.yaml",
+      "bytes": 514,
+      "sha256": "f5ae58251005860d46fb3524024b488662a439054361c201eab9311ed55abf88"
+    },
+    {
+      "path": "scripts/accelerate_configs/accelerate_zero2_ds.yaml",
+      "bytes": 514,
+      "sha256": "51ae364c5c1581688c062739bf7c09e694ba73073f8ae21bdb4506bc5c66fcf9"
+    },
+    {
+      "path": "scripts/accelerate_configs/accelerate_zero2_memorywam_ds.yaml",
+      "bytes": 351,
+      "sha256": "5875578659a87014293cea07fcb22e311e616022c5e5657d4b732e54b88969aa"
+    },
+    {
+      "path": "scripts/accelerate_configs/accelerate_zero3_ds.yaml",
+      "bytes": 513,
+      "sha256": "53f51776e4feb5cdd87fa38fb2a6deb58c3c786b6e4ae11ad6cd0cc399fd6244"
+    },
+    {
+      "path": "scripts/accelerate_configs/accelerate_zero3_memorywam_cpu_ds.yaml",
+      "bytes": 354,
+      "sha256": "923904e9a67420feae963f41888863cd8ddfc11c98a83f6d218738f38fefe5b0"
+    },
+    {
+      "path": "scripts/accelerate_configs/accelerate_zero3_memorywam_gpu_ds.yaml",
+      "bytes": 354,
+      "sha256": "ebf1a27e4a21e2e0812f3ef836d9bd3b4323a4341fed891fbdd3b16eae0e5b95"
+    },
+    {
+      "path": "scripts/common.sh",
+      "bytes": 2342,
+      "sha256": "270ea1fde33b61fffe38050d1ea4b666240899b5b37dbc3eaa21ce94610ab1aa"
+    },
+    {
+      "path": "scripts/data/collect_lerobot_roots.py",
+      "bytes": 3236,
+      "sha256": "9fb8c034b8fa0b38a19f0cce593c46028f282868b1f6f98f946ee63fe045ce98"
+    },
+    {
+      "path": "scripts/data/compute_robotwin_nonidle_ranges.py",
+      "bytes": 9811,
+      "sha256": "8c72b5f84750bc38fac610b0dbe07bf92eea06f8f56a6b48adeaff77999df9eb"
+    },
+    {
+      "path": "scripts/data/download_hf_dataset_folder.py",
+      "bytes": 7640,
+      "sha256": "846e184df49ef466cd99323fa642af8e9e69cf1cc96bd83e5480eb2c011df415"
+    },
+    {
+      "path": "scripts/data/precompute_noops_lerobot.sh",
+      "bytes": 526,
+      "sha256": "bad25418af471696782522c0e34aee0871b9a87aa3a41351b06825d91f3aca53"
+    },
+    {
+      "path": "scripts/dim/prepare_dim_imagewam_assets.sh",
+      "bytes": 732,
+      "sha256": "04c1385b9a674ab50b4a1959e4e22b747f59d33d6020f7e1739fcbb78c04c862"
+    },
+    {
+      "path": "scripts/dim/preprocess_action_dit_dim.py",
+      "bytes": 8052,
+      "sha256": "14fd5f6a5be944f78972c4df40f8831fb32141a1375a68999e6f47dbce7b26d7"
+    },
+    {
+      "path": "scripts/dim/run_train_dim_imagewam.sh",
+      "bytes": 1921,
+      "sha256": "2c07d17e4234e1ff78aca2d7b19870524de8cc0766d0e1769278d1de3abb1e52"
+    },
+    {
+      "path": "scripts/dim/train_dim_imagewam.sh",
+      "bytes": 721,
+      "sha256": "c70efd461d7ba17c9fb0aee37010fa50f97bb12818e087372fd348f592da5afe"
+    },
+    {
+      "path": "scripts/ds_configs/ds_zero1_config.json",
+      "bytes": 418,
+      "sha256": "3adc0ee1cbc0a02a872745c790ccf1bdf7f6e970b1c83be20c3a5c02b8f0f004"
+    },
+    {
+      "path": "scripts/ds_configs/ds_zero2_config.json",
+      "bytes": 416,
+      "sha256": "e8bc1fa6c170e4cd647f9efa73a87583b96bf2b1056d93e77a06076cde13532d"
+    },
+    {
+      "path": "scripts/ds_configs/ds_zero2_memorywam_config.json",
+      "bytes": 473,
+      "sha256": "2803f29d201734b8bd932a8cd40d250c6ba6e284a15bbcc3d8a4a344dd5e031b"
+    },
+    {
+      "path": "scripts/ds_configs/ds_zero3_config.json",
+      "bytes": 662,
+      "sha256": "c809176b601dc56b679292d1fb24237757455f90c0896ca2c1d3b322ff53294a"
+    },
+    {
+      "path": "scripts/ds_configs/ds_zero3_memorywam_cpu_config.json",
+      "bytes": 760,
+      "sha256": "e66892b2f8a9a1a75b3cfeafbe82ac6b598bc7076a406fa13eb6f62affd03931"
+    },
+    {
+      "path": "scripts/ds_configs/ds_zero3_memorywam_gpu_config.json",
+      "bytes": 746,
+      "sha256": "2ef9bcd4d6babfbecfcb1e4d82ede724d9caaf2fc680e4a3251edbd1aeee2098"
+    },
+    {
+      "path": "scripts/flux2/audit_qwen3vl_semantic_counts.py",
+      "bytes": 10428,
+      "sha256": "a762d521d8c42bfdd5d5c8287d0c5ee7d075c90fa9f436d53eadb2f303384735"
+    },
+    {
+      "path": "scripts/flux2/calibrate_qwen3vl_semantic_counts.py",
+      "bytes": 5176,
+      "sha256": "4c8335b61bee759a39f176039b75dfc2656d4ce5ed9129ee1f1623962079b8af"
+    },
+    {
+      "path": "scripts/flux2/eval_memorywam_rmbench_episode.py",
+      "bytes": 17646,
+      "sha256": "4e553223c89d15b3e4d18b89ac20d3e28fc38b350c8e82d144310b3e3bf94fea"
+    },
+    {
+      "path": "scripts/flux2/generate_gpt56_api_semantic_counts.py",
+      "bytes": 21787,
+      "sha256": "1e42eb8626faa4d13feeb2635bd19f5891b97643f577485225dd4db014b563dc"
+    },
+    {
+      "path": "scripts/flux2/generate_qwen3vl_semantic_counts.py",
+      "bytes": 30300,
+      "sha256": "e5446d2919c508fdf3c66b9f75f191f5bf8973a005116c4f049587e364831c7a"
+    },
+    {
+      "path": "scripts/flux2/precompute_flux2_qwen3_embeds.py",
+      "bytes": 12448,
+      "sha256": "731255ab209d2e90885fee2917ba8f7ea0745360fb2acde2c9f774b7d8e33020"
+    },
+    {
+      "path": "scripts/flux2/preflight_memorywam_fixed8_dlc.py",
+      "bytes": 7166,
+      "sha256": "ee4d776b49319680741702eabffd6237b1bcb0a1b8646dae76b6c3d42f7e2f8d"
+    },
+    {
+      "path": "scripts/flux2/preflight_memorywam_softk_dlc.py",
+      "bytes": 7257,
+      "sha256": "e94667758172e32c1c26774e6e350308957dd101212770433d71ea58d12c75ca"
+    },
+    {
+      "path": "scripts/flux2/prepare_flux2_files.sh",
+      "bytes": 1406,
+      "sha256": "583cbca706e33e05449ae1926739829815edb84129ab193d1ee4cab1001c8c79"
+    },
+    {
+      "path": "scripts/flux2/preprocess_action_dit_flux2.py",
+      "bytes": 6956,
+      "sha256": "ba44086aeeeea17e753ba84b4634cba8c41c0a9e4215050901b0988af467e269"
+    },
+    {
+      "path": "scripts/flux2/resume_qwen3vl_semantic_counts_8gpu.sh",
+      "bytes": 4210,
+      "sha256": "228f817d1fd3ff42a84afdc80f2604c18a257f5f243f8743a95e4b713673a578"
+    },
+    {
+      "path": "scripts/flux2/rmbench_memorywam_step285_server.yml",
+      "bytes": 1275,
+      "sha256": "f2204d9d60d309d6804f6ed8d61dae17b54e0857c62f4672c23721b8f94056fa"
+    },
+    {
+      "path": "scripts/flux2/run_eval_flux2_libero.sh",
+      "bytes": 2381,
+      "sha256": "ed1e6aafdd3bc9641d47fbe0fbd030aa7794d1de634d489ab17350b29b967932"
+    },
+    {
+      "path": "scripts/flux2/run_eval_flux2_libero_plus.sh",
+      "bytes": 2503,
+      "sha256": "7fb5dce58912be1dc622c9d0f90870250084c97201d0717f93e00712f73a9cbe"
+    },
+    {
+      "path": "scripts/flux2/run_eval_flux2_robotwin.sh",
+      "bytes": 2351,
+      "sha256": "04f32e153261c2c82b2aff4bf39feaf0898505b0eb995b6165f336a30a799ce3"
+    },
+    {
+      "path": "scripts/flux2/run_eval_memorywam_rmbench_rollout.sh",
+      "bytes": 3674,
+      "sha256": "fadf0e7563fe2d2d9d8e153569db9b00c8705b78b0826ddcc20d7bed6ad29e5b"
+    },
+    {
+      "path": "scripts/flux2/run_eval_memorywam_rmbench_rollout_dual_env.sh",
+      "bytes": 4036,
+      "sha256": "81e5bd5c8e9488288de24cae4acb35aa0b24a75465c1a9f0ee25cf1f91f19380"
+    },
+    {
+      "path": "scripts/flux2/run_eval_memorywam_robotwin.sh",
+      "bytes": 573,
+      "sha256": "c292e7c66a7b587e9130e08709069794592478b7f4968762a137142d6a9c1d45"
+    },
+    {
+      "path": "scripts/flux2/run_train_flux2_klein_imagewam.sh",
+      "bytes": 5093,
+      "sha256": "217ec7e301f8d42bccce09d14c017e066047f8c69a497723259847f14bbdde43"
+    },
+    {
+      "path": "scripts/flux2/run_train_memorywam_adaptive_vlm_rmbench_8gpu.sh",
+      "bytes": 650,
+      "sha256": "5f159b599cca030837f0b695e0c89f883cd3d1065606cba91b99c2cab4ca9c46"
+    },
+    {
+      "path": "scripts/flux2/run_train_memorywam_fixed8_episode_tbptt_rmbench_8gpu_dlc_bs2.sh",
+      "bytes": 1865,
+      "sha256": "d2a179bdde3e0f598cca38d33eade3398672b58f1cbc8fe88bca4554666a5758"
+    },
+    {
+      "path": "scripts/flux2/run_train_memorywam_from_flux2_rmbench_16gpu_dlc.sh",
+      "bytes": 5866,
+      "sha256": "281f5cd654124fd30a8bd2c2db2b5c23f574c18ed3814cdf61f2df99f97b4027"
+    },
+    {
+      "path": "scripts/flux2/run_train_memorywam_from_flux2_rmbench_8gpu.sh",
+      "bytes": 4865,
+      "sha256": "655b8f75b3ababac319475b6bd8ebe8c9366c7926d083b516fe31e58fb731ebe"
+    },
+    {
+      "path": "scripts/flux2/run_train_memorywam_robotwin.sh",
+      "bytes": 1743,
+      "sha256": "57662eeb1e660e072892eef7f5b1175f21e7a6440690ef31c582744d756336ef"
+    },
+    {
+      "path": "scripts/flux2/run_train_memorywam_sharedlatent_vlm_rmbench_16gpu_dlc.sh",
+      "bytes": 1962,
+      "sha256": "bd10f5ad5d683bb589095416bbdb1a0863c59c46405c65cd56e9d4694cc89c7b"
+    },
+    {
+      "path": "scripts/flux2/run_train_memorywam_sharedlatent_vlm_rmbench_8gpu_zero2.sh",
+      "bytes": 1464,
+      "sha256": "4593e08b4c3fdabe5c7c14b6efc0ab7e48f0f9ba2d00c5f4a8fe40be849699d7"
+    },
+    {
+      "path": "scripts/flux2/run_train_memorywam_sharedlatent_vlm_rmbench_8gpu_zero3_gpu.sh",
+      "bytes": 1405,
+      "sha256": "3c62002a2a025cd6ffe6b19e28d936967c8caf977078eeb752d9eb91e4e8df95"
+    },
+    {
+      "path": "scripts/flux2/run_train_memorywam_softk_vlm_rmbench_16gpu_dlc.sh",
+      "bytes": 9492,
+      "sha256": "c53d79849fc2d703fd1a2d10a555cd3c00b1cb7fe9197bfee4ab423760171160"
+    },
+    {
+      "path": "scripts/flux2/shard_qwen3vl_semantic_counts.py",
+      "bytes": 4196,
+      "sha256": "c249a2a52ce94a44a131b5927fff6a2a39642648e6e92c8ce37c01eb7f258f3e"
+    },
+    {
+      "path": "scripts/flux2/train_flux2_klein_imagewam.sh",
+      "bytes": 1134,
+      "sha256": "956893189a058e9dd0074326091a8e8113cd1565fdd3872bda78c7e906b97e62"
+    },
+    {
+      "path": "scripts/flux2/validate_gpt56_api_replan_cache.py",
+      "bytes": 3323,
+      "sha256": "e055958e862b97ee115798843016e054fdebc5249a25d5160639b77e2e8fb8ec"
+    },
+    {
+      "path": "scripts/flux2/validate_memorywam_from_flux2_assets.py",
+      "bytes": 5231,
+      "sha256": "d1e2d27f21967aac1752e7786619df1ab5e17fee80638805e808dfcedf5fa0f1"
+    },
+    {
+      "path": "scripts/flux2/validate_qwen3vl_replan_cache.py",
+      "bytes": 4694,
+      "sha256": "290633adf61078207a000a61d0ffd68f0a2245451f7fe4a4591cc92e21473263"
+    },
+    {
+      "path": "scripts/flux2/wait_and_run_qwen3vl_semantic_counts_8gpu.sh",
+      "bytes": 347,
+      "sha256": "4c9921d911e0375c0b12671f378f4ee3c440a0187a455d398992f6ed8fe64f60"
+    },
+    {
+      "path": "scripts/omnigen2/precompute_qwen_embeds.py",
+      "bytes": 14066,
+      "sha256": "6d4060682a76ccfd38b5772cce7a658162121502b180c13d64a5942a2fe5b565"
+    },
+    {
+      "path": "scripts/omnigen2/preprocess_action_dit_omnigen2.py",
+      "bytes": 5654,
+      "sha256": "1de2f494e992f51ca50148b984b35187399e90aa3b4d8dd815ee4633d9bb5355"
+    },
+    {
+      "path": "scripts/omnigen2/run_eval_omnigen2_libero.sh",
+      "bytes": 1850,
+      "sha256": "ebb330664ce9efa4c15d706c0f4f28e3b7032ad491a10719f9c5c0cc8f909c22"
+    },
+    {
+      "path": "scripts/omnigen2/run_eval_omnigen2_libero_plus.sh",
+      "bytes": 1981,
+      "sha256": "d535b4e782d4824bd5884048bcc18c97086b624fc47dc67852275db57f338ad4"
+    },
+    {
+      "path": "scripts/omnigen2/run_eval_omnigen2_robotwin.sh",
+      "bytes": 1982,
+      "sha256": "e54b60c0861c9812227cdfddbcc769e1fba6d26322603d0c98da46f2a6b47f0e"
+    },
+    {
+      "path": "scripts/omnigen2/run_train_cacheidm.sh",
+      "bytes": 2839,
+      "sha256": "6f4365b1c2a7b58e361ad9283d81576a880ce5d2228681f8ac5c89c82f95d089"
+    },
+    {
+      "path": "scripts/omnigen2/run_train_imagewam.sh",
+      "bytes": 3225,
+      "sha256": "17114c4d8c4640fdc5067d13c86151133d7b70f0b0073ffb09b41e5f33431210"
+    },
+    {
+      "path": "scripts/omnigen2/run_train_imagewam_real.sh",
+      "bytes": 1429,
+      "sha256": "31b474f2fa27c8d845bc97ffe42b5777ad643997e227aa01f81d9f1d8a439b82"
+    },
+    {
+      "path": "scripts/omnigen2/run_train_imagewam_resume.sh",
+      "bytes": 1541,
+      "sha256": "5ad1b89f09f64e8dcd249d7bacc9d59fe46dc67198d08babaf2d7ea9d667116b"
+    },
+    {
+      "path": "scripts/omnigen2/train_omnigen2_imagewam.sh",
+      "bytes": 842,
+      "sha256": "a0216c37484c25605fb0e2ee3e2bc4baf60e8972925be482dc9dcde45c3ed373"
+    },
+    {
+      "path": "scripts/ovis_u1/preprocess_action_dit_ovis_u1.py",
+      "bytes": 5116,
+      "sha256": "e1e4afc6488af61b718b46ab47ff5f7b396c8479691379e844973a12490fafe5"
+    },
+    {
+      "path": "scripts/ovis_u1/run_eval_ovis_libero_plus.sh",
+      "bytes": 1354,
+      "sha256": "cea4f0f4de41fa2524cb455933bf1d167028fc5d3cdbe69fda3e2145781be05a"
+    },
+    {
+      "path": "scripts/ovis_u1/run_train_ovis_u1_imagewam.sh",
+      "bytes": 2102,
+      "sha256": "f446cede6c75a9d857f4e679e2e5b4344db6d3f95f78d2c4d57bece8fbfd08ba"
+    },
+    {
+      "path": "scripts/ovis_u1/train_ovis_u1_imagewam.sh",
+      "bytes": 847,
+      "sha256": "4b6429f86ddd998e1451b1c21ea2109329a771d4b1b90e7fcfa0d59df109099f"
+    },
+    {
+      "path": "scripts/setup/_install_libero_env.sh",
+      "bytes": 1627,
+      "sha256": "fabfbe2cabafbf175daf1ff7ff9d5327328947e8b7d7564a1999fce0781d0df2"
+    },
+    {
+      "path": "scripts/setup/_install_libero_plus_env.sh",
+      "bytes": 3015,
+      "sha256": "c8e4a89b51b64fef8fe370da8da789181685560a0434804e2eaf7b40c28abbd7"
+    },
+    {
+      "path": "scripts/setup/install_data_convert_env.sh",
+      "bytes": 787,
+      "sha256": "a21d2635a31baca36b9962bd4627aa8cd67706085b469ecff2f7d1a24c607133"
+    },
+    {
+      "path": "scripts/setup/install_robotwin_env.sh",
+      "bytes": 1884,
+      "sha256": "f768686f6f42f7eab3ac18f5140d6b492dfdfa975da9c3b5fffb1e524448619a"
+    },
+    {
+      "path": "scripts/train.py",
+      "bytes": 376,
+      "sha256": "bf5b40d239029630e7fa7ac368f781b2f0684e97745455c0ea8a499508db953f"
+    },
+    {
+      "path": "scripts/train_zero1.sh",
+      "bytes": 3222,
+      "sha256": "c6f9eaaada0ab2a0a0a2da3033f2fd9bbd85a5b24b67b779aedf431991b93cc5"
+    },
+    {
+      "path": "scripts/train_zero2.sh",
+      "bytes": 3245,
+      "sha256": "382e7c09224ad7bbee5da4b4b6f8665a206cb54d4db91c6a60335726b97ee16e"
+    },
+    {
+      "path": "scripts/train_zero3.sh",
+      "bytes": 3251,
+      "sha256": "4486dd0ac7ed66c99045e6fc65b3718e5d4a79d6f00220602b3c4188d7cfbf8b"
+    },
+    {
+      "path": "src/imagewam/__init__.py",
+      "bytes": 25,
+      "sha256": "1a5c0a68bc3f9a90e894d4af84496c436c7d542397780bd0c69cce82d5eda5ac"
+    },
+    {
+      "path": "src/imagewam/datasets/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/imagewam/datasets/dataset_utils.py",
+      "bytes": 3844,
+      "sha256": "f61aaa62f546330a42ec0fa9c1b3ca0f2fe63992628e0a512a988ee2ddf45b91"
+    },
+    {
+      "path": "src/imagewam/datasets/eatb.py",
+      "bytes": 12245,
+      "sha256": "c2828b327923bbcaa23ebb624326ed5074cf8ef17b401a8281bfe67f12dcb27f"
+    },
+    {
+      "path": "src/imagewam/datasets/lerobot/base_lerobot_dataset.py",
+      "bytes": 36517,
+      "sha256": "398181e5d4d44880c1586d962ba73180d00f6e8cf0b5ae205b4509084028cd2d"
+    },
+    {
+      "path": "src/imagewam/datasets/lerobot/constants.py",
+      "bytes": 1969,
+      "sha256": "28bec3840dc437d7e6ebb21c434294b7b27a5d4cd2c7151a32caeff8bfa610a8"
+    },
+    {
+      "path": "src/imagewam/datasets/lerobot/lerobot/datasets/compute_stats.py",
+      "bytes": 7246,
+      "sha256": "4ada5e74520e9f056a3e6af8af250bf3f705589ca99c5c9764bc24f5b981a832"
+    },
+    {
+      "path": "src/imagewam/datasets/lerobot/lerobot/datasets/utils.py",
+      "bytes": 34342,
+      "sha256": "05b0e47114e1109cb75881fcdf345a5a8f30b49749b6022f46dd8e72c03337c4"
+    },
+    {
+      "path": "src/imagewam/datasets/lerobot/lerobot/datasets/video_utils.py",
+      "bytes": 21376,
+      "sha256": "dae530f25b2005f026861eb32c755e9c26cf716b2fd0dd6a7b7e48c83080060a"
+    },
+    {
+      "path": "src/imagewam/datasets/lerobot/lerobot/lerobot_dataset.py",
+      "bytes": 82717,
+      "sha256": "a59759b412af4ba607371a863daa0dd3157c42de514fa9314a51314f68d6ddb2"
+    },
+    {
+      "path": "src/imagewam/datasets/lerobot/lerobot/lerobot_dataset_v3.py",
+      "bytes": 24984,
+      "sha256": "5004c6cbabc754c271432f00e7e4b6998d3bbad3ae13f8ba9b4efb39a531efc7"
+    },
+    {
+      "path": "src/imagewam/datasets/lerobot/processors/base_processor.py",
+      "bytes": 11319,
+      "sha256": "20d921e27a046af9629140322de01698f93c0d052aa50e19f389f8e6b6704284"
+    },
+    {
+      "path": "src/imagewam/datasets/lerobot/processors/imagewam_processor.py",
+      "bytes": 15111,
+      "sha256": "e52eb117bfa646c0d82033b73f4c8c1bfe4cf98f49900ccab9a60120a16502e7"
+    },
+    {
+      "path": "src/imagewam/datasets/lerobot/robot_video_dataset.py",
+      "bytes": 37786,
+      "sha256": "461f339e703c813f320c8febd9545c9d20ceb297cdc91ec8930c593c8b4e2551"
+    },
+    {
+      "path": "src/imagewam/datasets/lerobot/transforms/action_state_merger.py",
+      "bytes": 3607,
+      "sha256": "d5b434e59a18b06b50cebff76a035a59ab73fd00223b26c271e65aee3204498e"
+    },
+    {
+      "path": "src/imagewam/datasets/lerobot/transforms/image.py",
+      "bytes": 11329,
+      "sha256": "e39391e62ccc364469e7cdc42da8575d7bbf4e7f0a1d55d428083dd4314fbc73"
+    },
+    {
+      "path": "src/imagewam/datasets/lerobot/transforms/misc.py",
+      "bytes": 441,
+      "sha256": "07212b358fde5912ebc223889910c9af673c75fd726f102583fd11be03c82124"
+    },
+    {
+      "path": "src/imagewam/datasets/lerobot/transforms/relative_action.py",
+      "bytes": 4136,
+      "sha256": "6c1cc5a5b4660d8e6cbc6def687eb822f6ff67264013b2542225cee5b45b7681"
+    },
+    {
+      "path": "src/imagewam/datasets/lerobot/transforms/rotation.py",
+      "bytes": 5736,
+      "sha256": "c8e476127c0b9da930e91a9eea401eefb512f2f5f2936db9dbcb063eda74bc50"
+    },
+    {
+      "path": "src/imagewam/datasets/lerobot/utils/normalizer.py",
+      "bytes": 14541,
+      "sha256": "2d54be4bd806fb23fbf9e74f82a6cdd12a295f7d6da6480c04e1797a8ca2cc4e"
+    },
+    {
+      "path": "src/imagewam/datasets/lerobot/utils/rotation.py",
+      "bytes": 21730,
+      "sha256": "82d7bc78f081f001f4e82ba3abebd44806bddbee0f39afad251d7ec3b4653895"
+    },
+    {
+      "path": "src/imagewam/models/__init__.py",
+      "bytes": 37,
+      "sha256": "f1a45c2c77939c6131f770b4a9143993ac9f29f6e5097719f2f303915948de82"
+    },
+    {
+      "path": "src/imagewam/models/backbones/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/imagewam/models/backbones/action_dit.py",
+      "bytes": 13685,
+      "sha256": "d7822c0f7664b954cf25e13836cf6df7ca0cf3789c25ced52d428fa2fbf3bdd3"
+    },
+    {
+      "path": "src/imagewam/models/backbones/action_dit_flux2.py",
+      "bytes": 12808,
+      "sha256": "181b4835de85ad622b63b329f5766da7da80e943716cf8366f9325640e90eaea"
+    },
+    {
+      "path": "src/imagewam/models/backbones/action_dit_omnigen2.py",
+      "bytes": 7017,
+      "sha256": "6d3be9bb9cd5ffe21eea36c1285408c359e3828c3b8b86afd557fc96b2e9e403"
+    },
+    {
+      "path": "src/imagewam/models/backbones/action_dit_sana.py",
+      "bytes": 11536,
+      "sha256": "2310321a889d374e28413efdc106ddcbe8d948947da082252f9e68637d3d499e"
+    },
+    {
+      "path": "src/imagewam/models/backbones/action_dit_yak.py",
+      "bytes": 5732,
+      "sha256": "b9554d36216fa9aa8ef2f79476e5e0b9af9a1458a244dd9e2079d8920ad86d69"
+    },
+    {
+      "path": "src/imagewam/models/backbones/dim_video_expert.py",
+      "bytes": 12637,
+      "sha256": "824f4810866476ae0dd71e318e18269202accad919a23a5ffb81376a72dee771"
+    },
+    {
+      "path": "src/imagewam/models/backbones/edit_memory.py",
+      "bytes": 66429,
+      "sha256": "bd5bab025b4902faad008381213678d2288885ba31540c358c9c7d8e239d1098"
+    },
+    {
+      "path": "src/imagewam/models/backbones/flux2_imports.py",
+      "bytes": 738,
+      "sha256": "8de82eda20e95a8650faf9ac49b5dcbdd1bc175cbc6154a218e720cf7aa7f63a"
+    },
+    {
+      "path": "src/imagewam/models/backbones/flux2_video_expert.py",
+      "bytes": 8580,
+      "sha256": "af5f580b26f5d386155d97213dba5816d52c2b5b2a3e0482dec8a7c723b3ab49"
+    },
+    {
+      "path": "src/imagewam/models/backbones/helpers/__init__.py",
+      "bytes": 430,
+      "sha256": "fef41c8fd108f793577a881f7f4fee6661d7e5cb5554f7e0a87f528993e60439"
+    },
+    {
+      "path": "src/imagewam/models/backbones/helpers/gradient.py",
+      "bytes": 590,
+      "sha256": "99595bc1f5bdf42540a4f658acfc2a9a0f63b576900c416b6d9f7c3e92609591"
+    },
+    {
+      "path": "src/imagewam/models/backbones/helpers/io.py",
+      "bytes": 7958,
+      "sha256": "c1f051df3e7dc631b225fc743e548339935c1685d1c362c2c4ed0fac9140bfd4"
+    },
+    {
+      "path": "src/imagewam/models/backbones/helpers/loader.py",
+      "bytes": 8501,
+      "sha256": "1b7b30e1fecf21699c95b866c72ef07b1284ba408415c2925b3de53e7078faa7"
+    },
+    {
+      "path": "src/imagewam/models/backbones/helpers/state_dict_converters.py",
+      "bytes": 5316,
+      "sha256": "35a577f1b48d4d87677602757b07a6a545c1e8eca82a704b9c65b11a92e6efc7"
+    },
+    {
+      "path": "src/imagewam/models/backbones/imagewam.py",
+      "bytes": 372560,
+      "sha256": "a0d8ea1d016df7786bd68ed2d02c5934c9ef3ee15c099aa3f850ab9e5bbb2423"
+    },
+    {
+      "path": "src/imagewam/models/backbones/imagewam_cache_idm.py",
+      "bytes": 47528,
+      "sha256": "6b8e12127876197fdcbe02c53377c4c01a4b2037eecb9aff54e1c22a838caaa2"
+    },
+    {
+      "path": "src/imagewam/models/backbones/imagewam_noise_idm.py",
+      "bytes": 44919,
+      "sha256": "f57b0d314229dcc211e6cc3300fc5c0aacea494f01b0fb408159720bf10e60d3"
+    },
+    {
+      "path": "src/imagewam/models/backbones/lora.py",
+      "bytes": 7204,
+      "sha256": "eb86dc59342d906cb2fa6fdf40ecc5a101fc8c3b746885e773511cd533a9e218"
+    },
+    {
+      "path": "src/imagewam/models/backbones/mot.py",
+      "bytes": 70986,
+      "sha256": "38bff1dc6106d3fda79e9ed3bcd5f51501236ca4966d65117c54080f28df11e0"
+    },
+    {
+      "path": "src/imagewam/models/backbones/omnigen2_video_expert.py",
+      "bytes": 15258,
+      "sha256": "7d392c194c7e37e73ee3bff2515d3a3852eba4e9d5ee69720165eb2054a51797"
+    },
+    {
+      "path": "src/imagewam/models/backbones/ovis_u1_imports.py",
+      "bytes": 387,
+      "sha256": "ea84495c3c811fb7a6a3f56ffc980767c6f1f2a54a93fe4fdf7d4d94dca01308"
+    },
+    {
+      "path": "src/imagewam/models/backbones/ovis_u1_video_expert.py",
+      "bytes": 9163,
+      "sha256": "a4b47020cc82a44ecf1873099d6fe4d6bd8985dc9f4d35dcbba9643a8491470a"
+    },
+    {
+      "path": "src/imagewam/models/backbones/schedulers/scheduler_continuous.py",
+      "bytes": 6005,
+      "sha256": "9ff5748c0b31cfacb1b2c4155507fe2709aac67f16f1428019d3798d9eb7dde7"
+    },
+    {
+      "path": "src/imagewam/models/backbones/wan22.py",
+      "bytes": 17350,
+      "sha256": "e333f8089d57cd5ea8f7d6f233966ee73893b09bb1b42185a774bb5e7e68374f"
+    },
+    {
+      "path": "src/imagewam/models/backbones/wan_video_dit.py",
+      "bytes": 31582,
+      "sha256": "a90d734f6b757400fe32a4114a66d99b155469b63d6d57860ca6cede4c5f5bb9"
+    },
+    {
+      "path": "src/imagewam/models/backbones/wan_video_text_encoder.py",
+      "bytes": 11801,
+      "sha256": "422f9e78f23a36890fa3c20478553ec44d6b9d44bf41336d8dfcb2ce915dc20b"
+    },
+    {
+      "path": "src/imagewam/models/backbones/wan_video_vae.py",
+      "bytes": 51442,
+      "sha256": "605f7fde690fa977839c8bfbf62c1932e2d2744d6ec30ec016a9b7e80e1929a2"
+    },
+    {
+      "path": "src/imagewam/runtime.py",
+      "bytes": 51484,
+      "sha256": "97b209dfff4a1e865dd6d1b17043c19b74287148ed2775244d5429f92274e8d8"
+    },
+    {
+      "path": "src/imagewam/trainer.py",
+      "bytes": 72310,
+      "sha256": "27797ee17b26b85186253713ba59a03651c5808f800ae87b90f804aa699e3d80"
+    },
+    {
+      "path": "src/imagewam/utils/__init__.py",
+      "bytes": 100,
+      "sha256": "6f7547b4b88594074d72ae306b317cc7cd49c126a5a3c2aefdd22a414f45f1d3"
+    },
+    {
+      "path": "src/imagewam/utils/config_resolvers.py",
+      "bytes": 2598,
+      "sha256": "22e8d9e8c2b39dfe635abe1d6a592b246dd6441086f13abdf82e7f86c3c12a22"
+    },
+    {
+      "path": "src/imagewam/utils/fs.py",
+      "bytes": 81,
+      "sha256": "ac7a515a823dd7f3542ba4fdd8f12c4abe95cdc558c1c09bd503a3d8bad80544"
+    },
+    {
+      "path": "src/imagewam/utils/logging_config.py",
+      "bytes": 4821,
+      "sha256": "28e9ac57ef7cb6dca5675e368ae5c27789462a9e2a8b33d3ca0214eff589ad63"
+    },
+    {
+      "path": "src/imagewam/utils/mem_tools.py",
+      "bytes": 5496,
+      "sha256": "360f17d0f2fdfb955b25a8a0fe2d7376c08abd3078f8573b8513d3d324afd2b3"
+    },
+    {
+      "path": "src/imagewam/utils/misc.py",
+      "bytes": 1266,
+      "sha256": "69a1680e9fa200aeb88293c442cd45f58f80a6201cf4eb1c884cec4a717815d5"
+    },
+    {
+      "path": "src/imagewam/utils/pytorch_utils.py",
+      "bytes": 5818,
+      "sha256": "77caf44c6010bce539e720b732d3cba647d599f7c78039b308b6a0cd618b4040"
+    },
+    {
+      "path": "src/imagewam/utils/samplers.py",
+      "bytes": 2226,
+      "sha256": "08039a35b4e04249bdc619add8ace252d2cb7739180ba009a92323c2f62950b5"
+    },
+    {
+      "path": "src/imagewam/utils/video_io.py",
+      "bytes": 853,
+      "sha256": "c54451707c56490937afe73165589351308a61e7ea4f45c1d58eff98f6fe5d8d"
+    },
+    {
+      "path": "src/imagewam/utils/video_metrics.py",
+      "bytes": 3541,
+      "sha256": "889010c2da0930786b3e4a22ea3d7881f9f01ea562c85cb6de8759aa54fc20fd"
+    },
+    {
+      "path": "tests/smoke_memorywam_dataset_sample.py",
+      "bytes": 2254,
+      "sha256": "ae63deeda1adb5f852e18eae3d357a679ed62676fe3cbbc61124bbaead9a9f23"
+    },
+    {
+      "path": "tests/test_edit_memory.py",
+      "bytes": 12236,
+      "sha256": "d515888d0d1df6ed4a94bf40ce4e9224c5cae09f007d141c24938bc4940eef3d"
+    },
+    {
+      "path": "tests/test_history_length_sampler.py",
+      "bytes": 936,
+      "sha256": "61195e19db2da1d714e2e4fd99ab5bf9acbbd229ffd5e54f9982bdcbfaf3a676"
+    },
+    {
+      "path": "tests/test_memory_curriculum.py",
+      "bytes": 10320,
+      "sha256": "6359bbd51c882ae9fdc614144ff14b5d5defa4ba23f7c98797bf3265c2c5f655"
+    },
+    {
+      "path": "tests/test_memorywam_conditioning.py",
+      "bytes": 989,
+      "sha256": "dcb8863712fb7337bf2f1d3aaa48bb90e2c3d6a78ced4fc8f90da2ffb061ad8d"
+    },
+    {
+      "path": "tests/test_memorywam_config.py",
+      "bytes": 1505,
+      "sha256": "1007b5df660ecb83a00910ebd598a4c3fd974644cd4f1b54ba32c493b50237c5"
+    },
+    {
+      "path": "tests/test_memorywam_dataset.py",
+      "bytes": 2660,
+      "sha256": "a0a6fdca033608cf12d8fcb8c2fc66c435394f56d3d9801d52cb073a7bc70c0e"
+    },
+    {
+      "path": "tests/test_memorywam_eatb.py",
+      "bytes": 8016,
+      "sha256": "cfa5c31ee683710c9cf954bae2f942bd35fb27a7d3fa1c54c2e8bb43b20c6cea"
+    },
+    {
+      "path": "tests/test_memorywam_episode_tbptt.py",
+      "bytes": 7857,
+      "sha256": "61f5f61b4b4a5d9f24b0c9ff5c6f27238735197aa84e6ad2cf9311b1c9b775d1"
+    },
+    {
+      "path": "tests/test_memorywam_forward.py",
+      "bytes": 18404,
+      "sha256": "125cc2b875d7e0eb08ee3d625ba906ae403ae975254c9d44fcd5db4b9820c854"
+    },
+    {
+      "path": "tests/test_memorywam_from_flux2_config.py",
+      "bytes": 3988,
+      "sha256": "5386dd322f6fd2ee63e4906ee4df331df3bd9d67f634378837e860fa094e4f46"
+    },
+    {
+      "path": "tests/test_memorywam_preprocessing.py",
+      "bytes": 4231,
+      "sha256": "66d98460d78842c1b3abd78d7142d5abde7078b96ff7fda2568ba2126d519768"
+    },
+    {
+      "path": "tests/test_memorywam_trainability.py",
+      "bytes": 2969,
+      "sha256": "0a24667d06e16a328d1675565693673a487b45d6fea0560a1e1552649519d084"
+    },
+    {
+      "path": "tests/test_scheduler_continuous.py",
+      "bytes": 1750,
+      "sha256": "d5bb37a16fe19c524d77325c0194cab24d38ff30db77e3666d709b0478f32299"
+    },
+    {
+      "path": "tests/test_train_infer_memory_parity.py",
+      "bytes": 10860,
+      "sha256": "f2822ee40b4429616fda8972b6c6b89630125fee868d88b1040fe7173944d3fb"
+    },
+    {
+      "path": "uv.lock",
+      "bytes": 566043,
+      "sha256": "99859760085b7891ec6a4449e804829f040bb902e1c39206553f17171ccf0cab"
+    }
+  ]
+}

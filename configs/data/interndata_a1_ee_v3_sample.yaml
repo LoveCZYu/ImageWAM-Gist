@@ -1,0 +1,53 @@
+defaults:
+  - interndata_a1_ee
+  - _self_
+
+interndata_a1_dataset_dirs:
+  - /apdcephfs_nj7/share_305204761/alixzhang/data/InternData-A1-V3/sim_updated_lerobotv30/articulation_tasks/franka/close_the_washingmachine_left
+  - /apdcephfs_nj7/share_305204761/alixzhang/data/InternData-A1-V3/sim_updated_lerobotv30/articulation_tasks/split_aloha/rotate_the_left_hearth_right_arm_counterclockwise
+
+train:
+  lerobot_backend: v3
+  lerobot_meta_cache: null
+  arrow_cache_dir: null
+  pretrained_norm_stats: ./dataset_meta/interndata_a1_ee_v3_sample_dataset_stats.json
+  qwen_text_cache_dir: null
+  processor:
+    train_transforms_by_key:
+      cam_high:
+        - _target_: imagewam.datasets.lerobot.transforms.image.ToTensor
+        - _target_: imagewam.datasets.lerobot.transforms.image.LetterboxResize
+          size: [240, 320]
+          fill: 0.0
+      cam_left:
+        - _target_: imagewam.datasets.lerobot.transforms.image.ToTensor
+        - _target_: torchvision.transforms.Resize
+          size: [240, 320]
+      cam_right:
+        - _target_: imagewam.datasets.lerobot.transforms.image.ToTensor
+        - _target_: torchvision.transforms.Resize
+          size: [240, 320]
+    val_transforms_by_key:
+      cam_high:
+        - _target_: imagewam.datasets.lerobot.transforms.image.ToTensor
+        - _target_: imagewam.datasets.lerobot.transforms.image.LetterboxResize
+          size: [240, 320]
+          fill: 0.0
+      cam_left:
+        - _target_: imagewam.datasets.lerobot.transforms.image.ToTensor
+        - _target_: torchvision.transforms.Resize
+          size: [240, 320]
+      cam_right:
+        - _target_: imagewam.datasets.lerobot.transforms.image.ToTensor
+        - _target_: torchvision.transforms.Resize
+          size: [240, 320]
+
+val:
+  lerobot_backend: ${data.train.lerobot_backend}
+  lerobot_meta_cache: ${data.train.lerobot_meta_cache}
+  arrow_cache_dir: ${data.train.arrow_cache_dir}
+  pretrained_norm_stats: ${data.train.pretrained_norm_stats}
+  qwen_text_cache_dir: ${data.train.qwen_text_cache_dir}
+  processor:
+    train_transforms_by_key: ${data.train.processor.train_transforms_by_key}
+    val_transforms_by_key: ${data.train.processor.val_transforms_by_key}

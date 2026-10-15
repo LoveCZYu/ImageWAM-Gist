@@ -1,0 +1,120 @@
+# @package _global_
+
+defaults:
+  - /memory: fixed
+  - override /data: rmbench_omnigen2
+  - override /model: imagewam_flux2_klein_4b_base_edit_memory
+  - _self_
+
+data:
+  train:
+    require_text_cache: false
+    qwen_text_cache_dir: ${oc.env:IMAGEWAM_RMBENCH_QWEN_CACHE,???}
+    qwen_context_len: 512
+    qwen_text_cache_format: qwen3_flux2
+    video_augmentation: null
+    endpoint_frames_only: true
+    edit_memory_history_mode: episode
+    edit_memory_history_stride: ${oc.env:IMAGEWAM_REPLAN_STEPS,16}
+    edit_memory_history_max_steps: 0
+    edit_memory_history_anchor_frames: 2
+    edit_memory_history_use_aug: false
+    edit_memory_replan_aligned_samples: true
+    edit_memory_episode_terminal_samples_only: true
+  val:
+    require_text_cache: false
+    qwen_text_cache_dir: ${data.train.qwen_text_cache_dir}
+    qwen_context_len: ${data.train.qwen_context_len}
+    qwen_text_cache_format: ${data.train.qwen_text_cache_format}
+    endpoint_frames_only: true
+    edit_memory_history_mode: episode
+    edit_memory_history_stride: ${data.train.edit_memory_history_stride}
+    edit_memory_history_max_steps: 0
+    edit_memory_history_anchor_frames: 2
+    edit_memory_history_use_aug: false
+    edit_memory_replan_aligned_samples: true
+    edit_memory_episode_terminal_samples_only: true
+
+# Exact episode history has variable length, so every rank uses one sequence.
+batch_size: 1
+gradient_accumulation_steps: 1
+num_workers: 4
+prefetch_factor: 2
+persistent_workers: true
+manual_batch_device_placement: true
+history_length_bucketing: true
+history_bucket_multiplier: 50
+keep_latest_state_only: false
+
+lr_scheduler_type: cosine
+learning_rate: 2e-4
+num_epochs: 5
+max_steps: null
+log_every: 1
+save_every: 50
+eval_every: 0
+weight_decay: 1e-2
+mixed_precision: bf16
+resume: null
+
+model:
+  proprio_dim: ${data.train.processor.proprio_output_dim}
+  qwen_context_len: ${data.train.qwen_context_len}
+  video_scheduler:
+    train_shift: 5.0
+    infer_shift: 5.0
+    num_train_timesteps: 1000
+    sampling_distribution: logit_normal
+    logit_mean: 0.0
+    logit_std: 1.0
+    loss_weighting: none
+  action_scheduler:
+    # MemoryWAM reports no action-time shift during training. ImageWAM's
+    # inference schedule stays at shift=5 because the paper does not specify it.
+    train_shift: 1.0
+    infer_shift: 5.0
+    num_train_timesteps: 1000
+    sampling_distribution: logit_normal
+    logit_mean: 0.0
+    logit_std: 1.0
+    loss_weighting: none
+  # Match official ImageWAM by fully fine-tuning the FLUX.2 video expert.
+  flux2_lora_config:
+    enabled: false
+    save_lora_merged: false
+    save_trainable_only: false
+  # MemoryWAM uses only equally weighted video/action flow-matching losses.
+  loss:
+    lambda_video: 1.0
+    lambda_action: 1.0
+  edit_memory_config:
+    enabled: true
+    bank:
+      anchor_frames: 2
+      recent_frames: 4
+      gist_tokens_per_frame: 8
+      max_entries: 0
+      detach_on_write: auto
+    training:
+      # EATB carries the detached episode-local bank across optimizer steps and
+      # backpropagates through K consecutive replans per update.
+      memory_source: eatb
+      history_required: true
+      replan_steps: ${oc.env:IMAGEWAM_REPLAN_STEPS,16}
+      tbptt_steps: 8
+      clean_conditioning_augmentation:
+        enabled: true
+        probability: 1.0
+        ratio_min: 0.0
+        ratio_max: 1.0
+      memory_curriculum:
+        enabled: false
+        teacher_only_until_step: 28
+        transition_start_step: 29
+        transition_end_step: 114
+        granularity: sample
+
+wandb:
+  enabled: false
+  project: memory-imagewam
+  name: rmbench_flux2_klein_4b_base_memorywam_from_flux2

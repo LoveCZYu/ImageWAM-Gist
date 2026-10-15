@@ -1,0 +1,46 @@
+# @package _global_
+
+defaults:
+  - override /data: interndata_a1_ee_v3_omnigen2
+  - override /model: imagewam_flux2_klein_4b_base
+  - _self_
+
+data:
+  train:
+    require_text_cache: false
+    qwen_text_cache_dir: ???
+    qwen_context_len: 128
+    qwen_text_cache_format: qwen3_flux2
+  val:
+    require_text_cache: false
+    qwen_text_cache_dir: ???
+    qwen_context_len: 128
+    qwen_text_cache_format: qwen3_flux2
+
+batch_size: 12
+num_workers: 24
+prefetch_factor: 2
+persistent_workers: true
+keep_latest_state_only: true
+
+lr_scheduler_type: "constant"
+learning_rate: 5e-5
+num_epochs: 1
+max_steps: null
+log_every: 10
+save_every: 1250
+eval_every: 100
+eval_num_samples: 32
+
+gradient_accumulation_steps: 8
+weight_decay: 1e-2
+mixed_precision: "bf16"
+resume: null
+
+model:
+  proprio_dim: ${data.train.processor.proprio_output_dim}
+
+wandb:
+  enabled: true
+  project: imagewam
+  name: interndata_a1_ee_v3_flux2_klein_4b_base_imagewam

@@ -1,0 +1,94 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "imagewam"
+version = "0.1.0"
+description = "ImageWAM: Do World Action Models Really Need Video Generation, or Just Image Editing?"
+requires-python = ">=3.10"
+dependencies = [
+  "accelerate==1.12.0",
+  "av==16.0.1",
+  "boto3==1.35.99",
+  "datasets==3.6.0",
+  "deepspeed==0.18.5",
+  "einops==0.8.1",
+  "gitpython==3.1.45",
+  "huggingface-hub==0.30.0",
+  "hydra-core==1.3.2",
+  "imageio==2.37.0",
+  "imageio-ffmpeg==0.6.0",
+  "jsonlines==4.0.0",
+  "modelscope==1.34.0",
+  "numpy==1.26.4",
+  "omegaconf==2.3.0",
+  "packaging==25.0",
+  "pandas==2.2.3",
+  "pillow==12.0.0",
+  "pyarrow==23.0.0",
+  "regex==2025.11.3",
+  "rich==14.2.0",
+  "safetensors==0.5.3",
+  "termcolor==2.5.0",
+  "torch==2.7.1",
+  "torchcodec",
+  "torchvision==0.22.1",
+  "tqdm==4.66.5",
+  "transformers==4.51.3", # Use this line if using Omnigen2 or Ovis
+  # "transformers==4.56.1", # Use this line if using flux
+  "typing-extensions==4.15.0",
+  "wandb==0.23.1",
+  "h5py"
+]
+
+[project.optional-dependencies]
+shared = [
+  "diffusers",
+  "peft",
+  "timm",
+  "opencv-python-headless",
+  "scipy",
+  "matplotlib",
+  "python-dotenv",
+  "torchdiffeq",
+  "bitsandbytes",
+  "tensorboard",
+  "sentencepiece",
+  "protobuf",
+  "ninja",
+]
+
+dim = [
+  "mmcv-full==1.7.2",
+  "setuptools<70",
+  "wheel",
+  "ipdb",
+  "pyrallis",
+  "apex"
+]
+interndata_pretrain = [
+  "lerobot>=0.4"
+]
+# uv pip install mmcv-full==1.7.2 --no-build-isolation
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["imagewam*"]
+
+# ---------------------------------------------------------------------------
+# uv: 把 torch / torchvision / torchcodec 指向 cu118 wheel index
+# 安装命令: uv pip install -e .
+# ---------------------------------------------------------------------------
+[[tool.uv.index]]
+name = "pytorch-cu118"
+url = "https://download.pytorch.org/whl/cu118"
+explicit = true
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu118" }]
+torchvision = [{ index = "pytorch-cu118" }]
+torchcodec = [{ index = "pytorch-cu118" }]

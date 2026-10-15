@@ -1,0 +1,11 @@
+policy_name: imagewam_remote_client
+task_name: null
+task_config: demo_clean
+ckpt_setting: null
+seed: -1
+instruction_type: unseen
+eval_num_episodes: 1
+eval_start_episode: 0
+eval_output_dir: null
+server_host: 127.0.0.1
+server_timeout: 600

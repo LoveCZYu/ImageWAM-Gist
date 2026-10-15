@@ -1,0 +1,25 @@
+# @package _global_
+
+model:
+  edit_memory_config:
+    adaptive_span:
+      enabled: false
+    adaptive_gist:
+      enabled: true
+      min_tokens: 0
+      max_tokens: 8
+      hidden_dim: 256
+      gap_temperature: 0.5
+      # The VLM labels define allocation; do not introduce a competing token penalty.
+      token_cost: 0.0
+      target_tokens: 4.0
+      no_cut_gap: 0.05
+    vlm_count_supervision:
+      enabled: true
+      write_only: false
+      cache_path: ${oc.env:IMAGEWAM_VLM_SEMANTIC_CACHE,null}
+      require_complete: true
+      # Direct soft-label cross entropy against cached VLM probabilities.
+      count_weight: 1.0
+      class_balance: false
+      class_balance_max_weight: 4.0

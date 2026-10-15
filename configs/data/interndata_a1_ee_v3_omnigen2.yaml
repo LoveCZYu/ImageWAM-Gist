@@ -1,0 +1,55 @@
+defaults:
+  - interndata_a1_ee_v3
+  - _self_
+
+train:
+  num_frames: 17
+  global_sample_stride: 4
+  sample_index_stride: 8
+  action_video_freq_ratio: 1
+  video_size: [288, 256]
+  robotwin_camera_layout: "compact_288x256"
+  require_text_cache: false
+  endpoint_frames_only: true
+  qwen_text_cache_dir: ???
+  qwen_context_len: 128
+  text_embedding_cache_dir: null
+  video_augmentation:
+    _target_: imagewam.datasets.lerobot.transforms.image.VideoAugmentation
+    p: 0.5
+    augment_types: [corrupt_only, color_only, both]
+    color_jitter:
+      brightness: 0.2
+      contrast: 0.2
+      saturation: 0.2
+      hue: 0.03
+    gamma:
+      range: [0.9, 1.1]
+    gaussian_noise:
+      std: 0.01
+    random_resized_crop:
+      scale: [0.95, 1.0]
+      ratio: preserve
+    rotate:
+      degrees: 5.0
+      fill: mean
+  processor:
+    num_obs_steps: ${data.train.num_frames}
+    image_obs_steps: 2
+
+val:
+  num_frames: ${data.train.num_frames}
+  global_sample_stride: ${data.train.global_sample_stride}
+  sample_index_stride: ${data.train.sample_index_stride}
+  action_video_freq_ratio: ${data.train.action_video_freq_ratio}
+  video_size: ${data.train.video_size}
+  robotwin_camera_layout: ${data.train.robotwin_camera_layout}
+  require_text_cache: ${data.train.require_text_cache}
+  endpoint_frames_only: ${data.train.endpoint_frames_only}
+  qwen_text_cache_dir: ${data.train.qwen_text_cache_dir}
+  qwen_context_len: ${data.train.qwen_context_len}
+  text_embedding_cache_dir: ${data.train.text_embedding_cache_dir}
+  video_augmentation: null
+  processor:
+    num_obs_steps: ${data.train.num_frames}
+    image_obs_steps: ${data.train.processor.image_obs_steps}

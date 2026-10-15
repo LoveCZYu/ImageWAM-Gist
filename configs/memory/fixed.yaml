@@ -1,0 +1,8 @@
+# @package _global_
+
+model:
+  edit_memory_config:
+    adaptive_span:
+      enabled: false
+    adaptive_gist:
+      enabled: false

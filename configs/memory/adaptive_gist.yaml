@@ -1,0 +1,15 @@
+# @package _global_
+
+model:
+  edit_memory_config:
+    adaptive_span:
+      enabled: false
+    adaptive_gist:
+      enabled: true
+      min_tokens: 1
+      max_tokens: 8
+      hidden_dim: 256
+      gap_temperature: 0.5
+      token_cost: 0.001
+      target_tokens: 4.0
+      no_cut_gap: 0.05

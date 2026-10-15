@@ -1,0 +1,65 @@
+defaults:
+  - imagewam_flux2_klein_4b_base
+  - _self_
+
+edit_memory_config:
+  fixed_gist_write_head: false
+  enabled: true
+  clean_prefix_memory_head: true
+  support_stack: flux2
+  version: v0.2-memorywam-hybrid-kv
+  selector:
+    type: per_layer_topk
+    topk_tokens_per_layer: all
+    use_action_attention_teacher: false
+    select_image_tokens_only: true
+    detach_stored_memory: false
+    store_dtype: bfloat16
+    learned: false
+  gist:
+    learned: true
+    init_std: 0.02
+    rope_marker: after_grid
+    temporal_embedding: rope
+    max_time_steps: 2048
+  adaptive_span:
+    enabled: false
+    min_frames: 1
+    max_frames: 64
+    hidden_dim: 256
+    gate_temperature: 1.0
+    span_cost: 0.0001
+  adaptive_gist:
+    enabled: false
+    min_tokens: 1
+    max_tokens: 8
+    hidden_dim: 256
+    gap_temperature: 0.5
+    token_cost: 0.001
+    target_tokens: 4.0
+    no_cut_gap: 0.05
+  bank:
+    max_entries: 0
+    anchor_frames: 2
+    recent_frames: 4
+    gist_tokens_per_frame: 8
+    write_threshold: 0.5
+    cooldown_steps: 0
+    detach_on_write: auto
+    consolidation: none
+  injection:
+    order: memory_video_action
+    native_kv: true
+    use_projection: false
+    allow_action_attend_memory: true
+    allow_video_attend_memory: true
+  training:
+    memory_source: episode_window
+    history_required: true
+    history_teacher_no_grad: false
+    history_steps_per_update: 0
+  losses:
+    lambda_attn: 0.1
+    lambda_memory_action: 1.0
+    lambda_distill: 0.0
+    lambda_diversity: 0.0
